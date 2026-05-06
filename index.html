@@ -7,37 +7,82 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+      background: radial-gradient(circle at top, #1b1f2a, #0b0d12);
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Animated glow background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(88,101,242,0.15), transparent 60%);
+      animation: move 12s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes move {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .container {
-      background: #1c1c1c;
-      padding: 25px;
-      border-radius: 12px;
+      position: relative;
+      z-index: 1;
+      background: #11131a;
+      padding: 30px;
+      border-radius: 16px;
       width: 90%;
-      max-width: 420px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      max-width: 450px;
+      box-shadow: 0 0 30px rgba(88,101,242,0.25);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background: rgba(88,101,242,0.2);
+      border: 1px solid #5865f2;
+      border-radius: 6px;
+      font-size: 10px;
+      margin-bottom: 10px;
     }
 
     h2 {
       text-align: center;
+      margin-bottom: 5px;
+      color: #5865f2;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
       margin-bottom: 20px;
     }
 
     input, textarea {
       width: 100%;
       margin-top: 10px;
-      padding: 10px;
-      border-radius: 8px;
+      padding: 12px;
+      border-radius: 10px;
       border: none;
-      background: #2a2a2a;
+      background: #1c1f2b;
       color: white;
       outline: none;
+      transition: 0.2s;
+    }
+
+    input:focus, textarea:focus {
+      box-shadow: 0 0 0 2px #5865f2;
     }
 
     textarea {
@@ -50,8 +95,8 @@
       margin-top: 15px;
       padding: 12px;
       border: none;
-      border-radius: 8px;
-      background: #4caf50;
+      border-radius: 10px;
+      background: #5865f2;
       color: white;
       font-size: 16px;
       cursor: pointer;
@@ -59,14 +104,15 @@
     }
 
     button:hover {
-      background: #43a047;
+      background: #4752c4;
+      transform: scale(1.03);
     }
 
     .footer {
       text-align: center;
       margin-top: 15px;
-      font-size: 12px;
-      color: #aaa;
+      font-size: 11px;
+      color: #777;
     }
   </style>
 </head>
@@ -75,7 +121,10 @@
 
 <div class="container">
 
+  <div class="badge">OFFICIAL SYSTEM</div>
+
   <h2>Avelo Ban Appeal System</h2>
+  <div class="subtitle">Submit your appeal for review</div>
 
   <form action="https://formsubmit.co/donzeljuric12@gmail.com" method="POST">
 
