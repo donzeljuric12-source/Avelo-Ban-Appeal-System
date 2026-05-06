@@ -1,25 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Avelo Ban Appeal</title>
+  <title>Avelo Ban Appeal System</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #1c1c1c;
+      padding: 25px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #2a2a2a;
+      color: white;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #4caf50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #43a047;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; background:#111; color:white; padding:20px;">
 
-<h2>Avelo Ban Appealing System</h2>
+<body>
 
-<form action="https://formsubmit.co/donzeljuric12@gmail.com" method="POST">
+<div class="container">
 
-  <input type="text" name="Discord Username" placeholder="Discord Username" required><br><br>
+  <h2>Avelo Ban Appeal System</h2>
 
-  <input type="text" name="Discord User ID" placeholder="Discord User ID" required><br><br>
+  <form action="https://formsubmit.co/donzeljuric12@gmail.com" method="POST">
 
-  <textarea name="Why banned?" placeholder="Why you got banned?" required></textarea><br><br>
+    <input type="text" name="Discord Username" placeholder="Discord Username" required>
 
-  <textarea name="Why unban?" placeholder="Why should you get unbanned?" required></textarea><br><br>
+    <input type="text" name="Discord User ID" placeholder="Discord User ID" required>
 
-  <button type="submit">Submit Appeal</button>
+    <textarea name="Reason for ban" placeholder="Why you got banned?" required></textarea>
 
-</form>
+    <textarea name="Appeal" placeholder="Why should you get unbanned?" required></textarea>
+
+    <button type="submit">Submit Appeal</button>
+
+  </form>
+
+  <div class="footer">
+    Avelo Ban Appeal System
+  </div>
+
+</div>
 
 </body>
 </html>
